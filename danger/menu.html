@@ -4,14 +4,44 @@
 	<meta charset="ANSI">
 	<title>危险视频</title>
 	<script>
-       		var _hmt = _hmt || [];
-        	(function() {
-            		var hm = document.createElement("script");
-      	      		hm.src = "https://hm.baidu.com/hm.js?4d425a5a6c6aa7e9b855ba6b762a234c";
-            		var s = document.getElementsByTagName("script")[0]; 
-            		s.parentNode.insertBefore(hm, s);
-        	})();
-    	</script>
+function setCookie(cname,cvalue,exdays)
+{
+  var d = new Date();
+  d.setTime(d.getTime()+(exdays*24*60*60*1000));
+  var expires = "expires="+d.toGMTString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+function getCookie(cname)
+{
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) 
+  {
+    var c = ca[i].trim();
+    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+  return "未获取到";
+}
+var verify = getCookie("verify");
+		if (confirm("1.池田__") == "大作" && verify == "未获取到"){
+			if (confirm("2.久本__") == "雅美"){
+				if (confirm("3.高技术力 后面一般会带哪4个字母") == "suki"){
+					if (confirm("(重要问题) 4. 大部分创价作品都是取自哪个项目里的？（回答東，带后面的7个字母）") == "東方project"){
+						if (confirm("回答完毕！你确定你可以接受里面的视频吗？如果不能，请不要进，如果可以，那么，请输入1") == "1"){
+							alert("确认完毕，进去吧。");
+							verify = "SC_SUCC";
+							setCookie("verify", "SC_SUCC", 3650);
+						}
+					}
+				}
+			}
+		}
+		if (verify == "未获取到"){
+			alert("回答错误！");
+			window.location.href = "/index.html";
+		}
+	</script>
 </head>
 
 <body bgcolor="#87CEFA">
