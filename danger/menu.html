@@ -24,7 +24,8 @@ function getCookie(cname)
   return "未获取到";
 }
 var verify = getCookie("verify");
-		if (prompt("1.池田__") == "大作" && verify == "未获取到"){
+if (verify == "未获取到"){
+		if (prompt("1.池田__") == "大作"){
 			if (prompt("2.久本__") == "雅美"){
 				if (prompt("3.高技术力 后面一般会带哪4个字母") == "suki"){
 					if (prompt("(重要问题) 4. 大部分创价作品都是取自哪个项目里的？（回答東，带后面的7个字母）") == "東方project"){
@@ -37,6 +38,7 @@ var verify = getCookie("verify");
 				}
 			}
 		}
+	}
 		if (verify == "未获取到"){
 			alert("回答错误！");
 			window.location.href = "/index.html";
