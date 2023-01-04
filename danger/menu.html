@@ -29,14 +29,16 @@ function getCookie(cname)
 }
 var verify = getCookie("verify");
 if (verify == "未获取到"){
-		if (prompt("1.池田__") == "大作"){
+		if (prompt("1.池田大_") == "作"){
 			if (prompt("2.久本__") == "雅美"){
 				if (prompt("3.高技术力 后面一般会带哪4个字母") == "suki"){
-					if (prompt("(重要问题) 4. 大部分创价作品都是取自哪个项目里的？（回答東，带后面的7个字母）") == "東方project"){
-						if (confirm("回答完毕！你确定你可以接受里面的视频吗？如果不能，请点击取消，如果可以，请点击确定")){
-							alert("确认完毕，进去吧。");
-							verify = "SC_SUCC";
-							setCookie("verify", "SC_SUCC", 3650);
+					if (prompt("(重要问题) 4. 创价学会音mad选曲如果是東方project里的，那么一般会带有什么标签（是東、頭 而非 东、头）？") == "東方頭破七分"){
+						if (prompt("5. hrhr(高等精神病) 的危险度是 ___ （数字）") == "3"){
+							if (confirm("回答完毕！你确定你可以接受里面的视频吗？如果不能，请点击取消，如果可以，请点击确定")){
+								alert("确认完毕，进去吧。");
+								verify = "SC_SUCC";
+								setCookie("verify", "SC_SUCC", 3650);
+							}
 						}
 					}
 				}
@@ -411,7 +413,13 @@ if (verify == "未获取到"){
 	<p style="text-align: center">Guoshuyan ©2022-2022 Hold some rights.<br />
 	<p style="text-align: center">DeemoMisaka ©2017-2020 All Rights Deserved.<br />
 	<input type="button" onclick="javascript:location.replace('/danger/main_ubc2/index.html');" id="ubc2_button" value="前往 UBC2 原网站">
+	<input type="button" onclick="javascript: document.cookie = 'verify=; expires=Thu, 01 Jan 1970 00:00:00 GMT';" id="reset_button" value="清除记录">
 	<style>
+		#reset_button {
+			position:fixed;
+    		left: 50px;
+    		bottom: 10px;
+		}
 		#ubc2_button {
     		position:fixed;
     		left: 10px;
