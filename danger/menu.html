@@ -165,16 +165,15 @@ if (verify == "未获取到"){
 			document.getElementById("h").innerHTML = h;
 			document.getElementById("m").innerHTML = m;
 			document.getElementById("s").innerHTML = s;
-			document.getElementById("sss").innerHTML = sss;
 		}
 
 		function update() {
 			var date = new Date();
 			updateDate(date.getFullYear(), date.getMonth() + 1, date.getDate());
-			updateTime(date.getHours(), date.getMinutes(), date.getSeconds(), parseInt(date.getMilliseconds() / 100));
+			updateTime(date.getHours(), date.getMinutes(), date.getSeconds());
 
 		};
-		setInterval("update()", 100);
+		setInterval("update()", 1000);
 
 	</script>
 	<hr />
