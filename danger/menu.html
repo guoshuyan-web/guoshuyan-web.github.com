@@ -413,16 +413,22 @@ if (verify == "未获取到"){
 	<p style="text-align: center">Guoshuyan ©2022-2022 Hold some rights.<br />
 	<p style="text-align: center">DeemoMisaka ©2017-2020 All Rights Deserved.<br />
 	<input type="button" onclick="javascript:location.replace('/danger/main_ubc2/index.html');" id="ubc2_button" value="前往 UBC2 原网站">
-	<input type="button" onclick="javascript: document.cookie = 'verify=; expires=Thu, 01 Jan 1970 00:00:00 GMT';" id="reset_button" value="清除记录">
+	<input type="button" onclick="javascript:document.cookie='verify=; expires=Thu, 01 Jan 1970 00:00:00 GMT';alert('清除成功!');location.reload();" id="reset_button" value="清除记录">
+	<input type="button" onclick="javascript:location.reload();" id="refresh_button" value="刷新/更新网页">
 	<style>
-		#reset_button {
-			position:fixed;
-    		left: 125px;
-    		bottom: 10px;
-		}
 		#ubc2_button {
     		position:fixed;
     		left: 10px;
+    		bottom: 10px;
+		}
+		#reset_button {
+			position:fixed;
+    		left: 210px;
+    		bottom: 10px;
+		}
+		#refresh_button {
+			position:fixed;
+    		left: 310px;
     		bottom: 10px;
 		}
 	</style>
