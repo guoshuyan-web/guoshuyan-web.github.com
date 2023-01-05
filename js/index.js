@@ -1,5 +1,5 @@
 function browerInfo(openMode){
-	if (openMode == ""){
+	if (openMode == "" || openMode == null){
 		console.log("_blank - URL加载到一个新的窗口。这是默认");
 		console.log("_parent - URL加载到父框架");
 		console.log("_self - URL替换当前页面");
@@ -16,3 +16,5 @@ function browerInfo(openMode){
 		window.open("/brower_info.html", openMode)
 	}
 }
+
+// js 都翻，你是真不要脸啊
