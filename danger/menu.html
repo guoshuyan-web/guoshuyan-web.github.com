@@ -7,6 +7,7 @@
 	<title>危险视频</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
 <script>
 var vConsole = new window.VConsole();
 </script>
@@ -32,11 +33,11 @@ function getCookie(cname)
 }
 var verify = getCookie("verify");
 if (verify == "未获取到"){
-		if (prompt("1.池田大_") == "作"){
-			if (prompt("2.久本__") == "雅美"){
-				if (prompt("3.高技术力 后面一般会带哪4个字母") == "suki"){
-					if (prompt("(重要问题) 4. 创价学会音mad选曲如果是東方project里的，那么一般会带有什么标签（是東、頭 而非 东、头）？") == "東方頭破七分"){
-						if (prompt("5. hrhr(高等精神病) 的危险度是 ___ （数字）") == "3"){
+		if (md5(prompt("1.池田大_")) == "4cde0dec60ada4915bb092f71a6ceb8b"){
+			if (md5(prompt("2.久本__")) == "dded4187ec3628b04bf19e80b3058245"){
+				if (md5(prompt("3.高技术力 后面一般会带哪4个字母")) == "d61155f6f6120c0f17546b5311b08f9e"){
+					if (md5(prompt("(重要问题) 4. 创价学会音mad选曲如果是東方project里的，那么一般会带有什么标签（是東、頭 而非 东、头）？")) == "9d1efad6753e1317a95a44d0dad93faf"){
+						if (md5(prompt("5. hrhr(高等精神病) 的危险度是 ___ （数字）")) == "eccbc87e4b5ce2fe28308fd9f2a7baf3"){
 							if (confirm("回答完毕！你确定你可以接受里面的视频吗？如果不能，请点击取消，如果可以，请点击确定")){
 								alert("确认完毕，进去吧。");
 								verify = "SC_SUCC";
